@@ -7,11 +7,11 @@
   <body>
     <p>
 <?php
-  echo $_GET['startDate'];
-?>
-  <br />
-<?php
-echo $_GET['endDate'];
+/*Condition pour vérifier l'existence des paramètres*/
+  if(isset($_GET['startDate']) && isset($_GET['endDate'])){
+    /*Affichage des paramètres*/
+    echo $_GET['startDate'] . ' ' . $_GET['endDate'];
+  }
 ?>
     </p>
   </body>
